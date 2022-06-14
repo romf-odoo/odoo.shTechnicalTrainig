@@ -17,8 +17,9 @@
     'depends': ['base'],
     
     'data': [
-        
-        
+        'views/spaceship_menuitem.xml',
+        'security/spaceship_security.xml',
+        'security/ir.model.access.csv',
     ],
     
     'demo': [

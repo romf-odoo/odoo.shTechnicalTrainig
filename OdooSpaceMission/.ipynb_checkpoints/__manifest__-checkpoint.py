@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Odoo space mission',
+    'name': 'Odoo space missionn',
     
     'summary': """Module to get to the moon""",
     

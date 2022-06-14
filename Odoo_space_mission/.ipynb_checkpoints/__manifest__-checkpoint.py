@@ -22,8 +22,7 @@
     ],
     
     'demo': [
-        
-        
+        'demo/spaceship2_demo.xml',
     ],
     
 }

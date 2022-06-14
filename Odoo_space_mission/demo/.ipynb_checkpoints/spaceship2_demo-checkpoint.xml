@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record model="spaceship2">
+            <field name="dimensions_height">1234.0</field>
+            <field name="dimensions_width">1122.0</field>
+            <field name="fuel_type">Rocket Fuel</field>
+            <field name="passengers">1200</field>
+            <field name="active">True</field>
+        </record>
+        <record model="spaceship2">
+            <field name="dimensions_height">1634</field>
+            <field name="dimensions_width">1322</field>
+            <field name="fuel_type">Rocket Fuel</field>
+            <field name="passengers">1500</field>
+            <field name="active">True</field>
+        </record>
+        <record model="spaceship2" >
+            <field name="dimensions_height">234.6</field>
+            <field name="dimensions_width">122.6</field>
+            <field name="fuel_type">Rocket Fuel</field>
+            <field name="passengers">12</field>
+            <field name="active">True</field>
+        </record>
+
+       
+    </data>
+</odoo>

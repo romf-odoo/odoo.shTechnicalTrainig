@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 {
+    'license': 'LGPL-3',
     'name': 'Odoo space mission',
     
     'summary': """Module to get to the moon""",
@@ -18,6 +19,7 @@
     
     'data': [
         'views/spaceship_menuitem.xml',
+        'views/spaceship_views.xml',
         'security/spaceship_security.xml',
         'security/ir.model.access.csv',
     ],

@@ -15,11 +15,13 @@
     
     'version': '0.1',
     
-    'depends': ['base'],
+    'depends': ['project'],
     
     'data': [
         'views/spaceship_menuitem.xml',
         'views/spaceship_views.xml',
+        'views/mission_views.xml',
+        'views/project_views_inherit.xml',
         'security/spaceship_security.xml',
         'security/ir.model.access.csv',
     ],

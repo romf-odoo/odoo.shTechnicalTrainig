@@ -4,7 +4,7 @@ from odoo import models, fields, api
 from odoo.exceptions import UserError, ValidationError
 class spaceship2(models.Model):
     _name = 'spaceship2'
-    __description = "this is a spaceship to go to the moon"
+    _description = "this is a spaceship to go to the moon"
     
     name = fields.Char('name', required=True)
     height = fields.Float('height', required=True)
@@ -14,6 +14,8 @@ class spaceship2(models.Model):
     passengers = fields.Integer('passengers', required=True)
     active = fields.Boolean('is_active', default=True)
     
+    
+    mission_ids = fields.One2many(comodel_name="mission",inverse_name="spaceship_id",string="missions")
     
     @api.onchange('passengers')
     def _onchange_(self):

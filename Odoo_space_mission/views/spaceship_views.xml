@@ -23,12 +23,12 @@
                     <field name='height' force_save="1" />
                     <field name='width'  force_save="1"/>
                   </group>
-                  <!-- <group>
-                    
-                  </group> -->
                   <group>
                     <field name='fuel_type' />
                   </group>
+                </page>
+                <page string="Mission">
+                  <field name="mission_ids" />
                 </page>
               </notebook>
             </sheet>
@@ -45,5 +45,8 @@
           </tree>
         </field>
       </record>
+
+      
+
     </data>
   </odoo>

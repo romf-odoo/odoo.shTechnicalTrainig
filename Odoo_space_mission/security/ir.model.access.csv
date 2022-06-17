@@ -3,4 +3,6 @@ spaceship_admin,spaceship admin,model_spaceship2,spaceship_access,1,1,1,1
 spaceship_crew,spaceship crew,model_spaceship2,spaceship_access,1,1,1,0
 general_user,general user,model_spaceship2,,1,0,0,0
 mission_admin,mission admin,model_mission,spaceship_access,1,1,1,1
-mission_read_all, session read all,model_mission,,1,0,0,0
+mission_read_all,mission read all,model_mission,,1,0,0,0
+wizard_perms,wizard permission,model_project_wizard,,1,1,1,1
+

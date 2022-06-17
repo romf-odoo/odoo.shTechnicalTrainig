@@ -15,12 +15,15 @@
     
     'version': '0.1',
     
-    'depends': ['project'],
+    'depends': ['project','website'],
     
     'data': [
         'views/spaceship_menuitem.xml',
         'views/spaceship_views.xml',
         'views/mission_views.xml',
+        'wizard/project_wizard_view.xml',
+        'reports/spaceship.xml',
+        'views/space_mission_web.xml',
         'views/project_views_inherit.xml',
         'security/spaceship_security.xml',
         'security/ir.model.access.csv',

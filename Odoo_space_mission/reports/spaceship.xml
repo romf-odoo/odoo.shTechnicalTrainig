@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <record id="report_spaceship" model="ir.actions.report">
+        <field name="name">Odoo_space_mission</field>
+        <field name="model">spaceship2</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">spaceship_report_document</field>
+        <field name="report_file">Odoo_space_mission.spaceship.report</field>
+        <field name="print_report_name">'Picking Operations - %s - %s' % (object.partner_id.name or '', object.name)</field>
+        <field name="binding_model_id" ref="Odoo_space_mission.model_spaceship2"/>
+        <field name="binding_type">report</field>
+    </record> -->
+
+
+
+    <record id='report_spaceship' model='ir.actions.report'>
+        <field name='name'>Spaceship Report</field>
+        <field name='model'>spaceship2</field>
+        <field name='report_type'>qweb-html</field>
+        <field name='report_name'>Odoo_space_mission.report_spaceship_document</field>
+        <field name='report_file'>odoo-spacesihp.report_spaceship</field>
+        <field name='print_report_name'>'Spaceship Report - %s - %s' % (object.partner_id.name or '', object.name)</field>
+        <field name='binding_model_id' ref='Odoo_space_mission.model_spaceship2'/>
+        <field name='binding_type'>report</field>
+      </record>
+    
+    <template id="Odoo_space_mission.report_spaceship_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.name" class="mt16"/>
+                        <div class="row mt32 mb32" id="spaceship_info">
+                            
+                            <div t-if="doc.id" class="col-auto mw-100 mb-2">
+                                <strong>SpaceShip:</strong>
+                                <span t-field="doc.name"></span>
+                            </div>
+                        </div>
+                        <h4>Missions</h4>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th name="th_name">Name</th>
+                                    <th name="th_Engines">Engines</th>
+                                    <th name="th_Fuel">Fuel</th>
+                                </tr>
+                                <tbody>
+                                     <t t-foreach="doc.mission_ids" t-as="mission">
+                                        <tr>
+                                            <td t-if="mission.name" name="td_name">
+                                                <span t-field="mission.name"/>
+                                            </td>
+                                            <td t-if="mission.description">
+                                                <span t-field="mission.description"></span>
+                                            </td>
+                                            <td t-if="mission.engines">
+                                                <span t-field="mission.engines"></span>
+                                            </td>
+                                            <td t-if="mission.fuel_amount">
+                                                <span t-field="mission.fuel_amount"></span>
+                                            </td>
+                                        </tr>
+                                    </t> 
+                                </tbody>
+                            </thead>
+                        </table>
+                    </div> 
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

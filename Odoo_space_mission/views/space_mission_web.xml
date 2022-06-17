@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <template id="spaceship_website">
+            <t t-call="website.layout">
+                <t t-set="title">Spaceship_Mission</t>
+                <div>
+                    <div class="container">
+                        <h1>SpaceShips</h1>
+                        <t t-foreach="spaceships" t-as="spaceship">
+                            <h3>
+                                <t t-esc="spaceship.id"></t>
+                                <t t-esc="spaceship.name"></t>
+                            </h3>
+                            <p>Passengers:
+                                <span t-field="spaceship.passengers"> </span>
+                            </p>
+
+                            <strong>Missions</strong>
+                            <t t-foreach="spaceship.mission_ids" t-as="mission">
+                                <p>
+                                    <a t-attf-href="/spaceship/{{ slug(mission)}}">
+                                        <t t-esc="mission.name"/>
+                                    </a>
+                                </p>
+
+                            </t>
+                            <t t-if="not spaceship.mission_ids">
+                                <p>No current missions</p>
+                            </t> 
+                            
+                            
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="Odoo_space_mission.mission_website">
+            <t t-call="website.layout">
+                <t t-set="title">Mission</t>
+                <div class="container">
+                    <h3 t-field="mission.name"></h3>
+                    <h5>Description:</h5>
+                    <p t-field="mission.description"></p>
+                    <h5>Start Date:</h5>
+                    <p t-field="mission.launchdate"></p>
+                    <h5>Finish Date:</h5>
+                    <p t-field="mission.returndate"></p>
+                </div>
+            </t>
+        </template>
+    </data>
+    
+
+</odoo>

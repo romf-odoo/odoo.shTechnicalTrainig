@@ -10,5 +10,13 @@ class ProjectWizard(models.TransientModel):
         
     
     mission_id = fields.Many2one(comodel_name='mission', string='Mission', required = True, default= _default_mission)
-    
-        
+    name = fields.Char(string="name")
+    def create_project(self):
+        print("hola")    
+        project = self.env['project.project'].create({
+            'name':self.name,
+            'mission_id': self.mission_id.id
+            
+             
+        })
+          #mission_id = self.env[' ']
